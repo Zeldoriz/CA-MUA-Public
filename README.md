@@ -12,6 +12,7 @@ You can view the live site here:
 - **Portfolio Gallery**: Displays a collection of makeup work with high-quality images.
 - **Service Information**: Details of the makeup services provided.
 - **Contact Links**: Simple and fast way to allow potential clients to connect with the makeup artist.
+  Note: Client contact links have been disabled in favor of client anonimity.
 
 ## Installation
 
