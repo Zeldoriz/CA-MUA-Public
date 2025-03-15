@@ -1,0 +1,244 @@
+.navSubHeader,
+.navList,
+.navFooter {
+  font-family: "Cinzel", serif;
+  font-weight: 500;
+}
+
+/* Nav container scrollbar settings { */
+.scrollable {
+  height: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.scrollable::-webkit-scrollbar {
+  width: 0.5rem;
+}
+
+.scrollable::-webkit-scrollbar-track {
+  border-radius: 10px;
+  background-color: #e7e7e7;
+  border: 1px solid #cacaca;
+  box-shadow: inset 0 0 1px rgba(0, 0, 0, 0.1);
+}
+
+.scrollable::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: rgba(54, 54, 54, 0.5);
+}
+/* } Nav container scrollbar settings */
+
+.homeContainer {
+  background-color: var(--primary-bg-color);
+}
+
+.navContainer {
+  height: 100vh;
+  width: auto;
+  padding: 0 1rem;
+  background-color: var(--transluscent-primary-bg-color);
+  position: fixed;
+  left: 2.5rem;
+  z-index: 10;
+}
+
+.navInnerContainer {
+  height: 50vh;
+  width: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 15vh 0;
+  height: 70vh;
+}
+
+.mainLogo img {
+  mix-blend-mode: multiply;
+  height: 5.5rem;
+}
+
+.navList ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.navList li:hover {
+  cursor: pointer;
+  color: #cbad8d;
+}
+
+.navContactLinks {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  width: 100%;
+}
+
+.navContactLinks img {
+  opacity: 0.7;
+}
+
+.navContactLinks img:hover {
+  cursor: pointer;
+}
+
+.navFooter {
+  opacity: 0.6;
+  font-weight: 700;
+  font-size: 0.7rem;
+  letter-spacing: -0.01rem;
+}
+
+.galleryContainer {
+  display: flex;
+  align-items: center;
+}
+
+.gallery {
+  width: 100%;
+  height: 70vh;
+  padding: 15vh 0;
+  padding-left: calc(2.5rem + 228px + 2rem);
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 0.1rem;
+}
+
+/* Mobile Section */
+
+@media (width < 768px) {
+  /* To show scrollbar regardless on actual mobile device, or desktop with mobile res */
+  /* Scrollbar Settings { */
+  .homeContainer::-webkit-scrollbar {
+    height: 0.55em;
+  }
+
+  .homeContainer::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+
+  .homeContainer::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(0, 0, 0, 0.35);
+  }
+  /* } Scrollbar Settings */
+
+  .mainLogo img {
+    height: 4rem;
+    margin-left: 1rem;
+  }
+
+  .homeContainer {
+    overflow-y: hidden;
+  }
+
+  .gallery {
+    padding: 0;
+    position: relative;
+    --top: 11vh;
+    top: var(--top);
+    height: calc(100vh - var(--top));
+  }
+}
+
+.mobileNavContainer {
+  position: fixed;
+  height: 11vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 10;
+}
+
+.mobileNavTrans {
+  background-color: var(--transluscent-primary-bg-color);
+}
+
+.mobileNavOpaque {
+  background-color: var(--primary-bg-color);
+}
+
+.mobileNavBurger {
+  padding: 0.5rem;
+  border: 1px solid transparent;
+  margin-right: 1rem;
+  height: 2rem;
+}
+
+.mobileNavBurger:hover {
+  cursor: pointer;
+}
+
+.mobileNavBurger:active {
+  border-color: #333333;
+  border-radius: 5px;
+}
+
+.mobileNavMenu {
+  position: fixed;
+  --top: 10.9vh;
+  top: var(--top);
+  height: calc(100vh - var(--top));
+  width: 100vw;
+  background-color: var(--primary-bg-color);
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.MNMactive {
+  visibility: visible;
+  opacity: 1;
+  transition: visibility 0.3s ease, opacity 0.3s ease;
+}
+
+.MNMhidden {
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0.3s ease, opacity 0.3s ease;
+}
+
+.mobileNavMenu ul {
+  margin-top: 1.5rem;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+}
+
+.mobileNavMenu li {
+  font-size: 1.5rem;
+}
+
+.mobileNavMenu li:active {
+  color: #cbad8d;
+}
+
+.mobileNavMenuLines {
+  height: 1px;
+  width: 80vw;
+  background-color: #333333;
+}
+
+.mobileNavFooter {
+  margin-bottom: 1rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  .navContactLinks {
+    gap: 1rem;
+    justify-content: center;
+  }
+}
