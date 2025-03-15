@@ -4,7 +4,7 @@
 
 This is a portfolio website created for a makeup artist to showcase their work and services. The website is designed to offer a clean, user-friendly interface where potential clients can view the artist's portfolio, learn about the services offered, and easily get in touch.
 
-You can view the live site here:[ca-mua-public.vercel.app](https://ca-mua-public.vercel.app/)
+You can view the live site here: [ca-mua-public.vercel.app](https://ca-mua-public.vercel.app/)
 
 ## Features
 
